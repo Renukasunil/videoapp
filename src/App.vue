@@ -1,18 +1,29 @@
 <template>
+  <div>
   <img alt="Vue logo" src="./assets/logo.png">
   <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <VideoUpload />
+    <SubtitleEditor />
+    <VideoPlayer :videoSrc="uploadedVideo" :subtitles="subtitles" />
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VideoUpload from './components/VideoUpload.vue';
+import SubtitleEditor from './components/SubtitleEditor.vue';
+import VideoPlayer from './components/VideoPlayer.vue';
 
 export default {
-  name: 'App',
+   name: 'App',
   components: {
-    HelloWorld
+    VideoUpload,
+    SubtitleEditor,
+    VideoPlayer
   }
 }
 </script>
+
+
 
 <style>
 #app {
